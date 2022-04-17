@@ -1,14 +1,39 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-	  <LangVersion>latest</LangVersion>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<LangVersion>latest</LangVersion>
+		<Authors>PapyrusCompendium</Authors>
+		<Company />
+		<Product></Product>
+		<PackageProjectUrl>https://github.com/PapyrusCompendium/SystemUnderTestUnitTesting</PackageProjectUrl>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<RepositoryUrl>https://github.com/PapyrusCompendium/SystemUnderTestUnitTesting</RepositoryUrl>
+		<RepositoryType>Git</RepositoryType>
+		<PackageReleaseNotes>A very small package I commonly use for writing clean unit tests.</PackageReleaseNotes>
+		<PackageIcon>images\SystemUnderTest.png</PackageIcon>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="AutoFixture.AutoMoq" Version="4.17.0" />
-    <PackageReference Include="Moq" Version="4.17.2" />
-    <PackageReference Include="Moq.AutoMock" Version="3.3.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<Folder Include="images\" />
+		<None Include="images\SystemUnderTest.png" Pack="true" Visible="false" PackagePath="images\SystemUnderTest.png" />
+		<PackageReference Include="AutoFixture.AutoMoq" Version="4.17.0" />
+		<PackageReference Include="Moq" Version="4.17.2" />
+		<PackageReference Include="Moq.AutoMock" Version="3.3.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Images\" />
+		<None Include="images\SystemUnderTest.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+		<None Include="..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
 
 </Project>
