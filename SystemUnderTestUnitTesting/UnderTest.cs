@@ -3,15 +3,15 @@
 using Moq.AutoMock;
 
 namespace SystemUnderTestUnitTesting {
-    public class UnderTest<TInterface, TClass> where TClass : class, TInterface {
+    public class UnderTest<TClass> where TClass : class {
         protected AutoMocker AutoMocker = new();
         protected TClass SystemUnderTest;
 
-        public UnderTest(bool mockPrivateMembers = default) {
+        public UnderTest(bool enablePrivate = default) {
             Setup();
             SetupAsync().Wait();
 
-            SystemUnderTest = AutoMocker.CreateInstance<TClass>(mockPrivateMembers);
+            SystemUnderTest = AutoMocker.CreateInstance<TClass>(enablePrivate);
 
             Arrange();
             ArrangeAsync().Wait();
